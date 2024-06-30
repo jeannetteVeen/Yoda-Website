@@ -1,0 +1,1861 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<title>yoda</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="description" content="Online gratis live anoniem chatten met vreemden of bekende vrienden, met en zonder registratie.   In de chat wereld is het van belang de menselijke connectie niet te vergeten.  In ons chatdorp brengen wij het &quot;dorpsgevoel&quot; van samenhorigheid terug.  Ontmoet elkaar in onze mainroom, het dorpshuis, of in één van de andere chatrooms.  Als geregistreerde inwoner heb je de mogelijkheid om een profiel met een foto aan te maken, maar als gast ben je ook welkom">
+<meta name="keywords" content="chatten, online, live chatten met vreemden, gratis chatten, vrienden, gezellig">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<link id="siteicon" rel="shortcut icon" type="image/png" href="default_images/icon.png"/>
+<link rel="stylesheet" type="text/css" href="js/fancy/jquery.fancybox.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/fontawesome/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="css/selectboxit.css" />
+<link rel="stylesheet" type="text/css" href="js/jqueryui/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<link id="gradient_sheet" rel="stylesheet" type="text/css" href="css/colors.css" />
+<link id="actual_theme" rel="stylesheet" type="text/css" href="css/themes/Dorp/Dorp.css" />
+<link rel="stylesheet" type="text/css" href="css/responsive.css" />
+<script data-cfasync="false" src="js/jquery-3.5.1.min.js"></script>
+<script data-cfasync="false" src="system/language/Netherlands/language.js"></script>
+<script data-cfasync="false" src="js/fancy/jquery.fancybox.js"></script>
+<script data-cfasync="false" src="js/jqueryui/jquery-ui.min.js"></script>
+<script data-cfasync="false" src="js/jqueryui/jquery_ui_punch.js"></script>
+<script data-cfasync="false" src="js/global.min.js"></script>
+<script data-cfasync="false" src="js/function_split.js"></script>
+<script data-cfasync="false" src="js/yall/yall.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+	yall({
+		observeChanges: true
+	});
+});
+</script>
+<script data-cfasync="false" src="js/function_logged.js"></script>
+<link rel="stylesheet" type="text/css" href="css/custom.css" />
+<script data-cfasync="false">
+	var pageEmbed = 0;
+	var pageRoom = 1;
+	var curPage = 'home';
+	var loadPage = '';
+	var bbfv = '';
+	var rtlMode = '0';
+</script>
+<script data-cfasync="false">
+	var user_rank = 50;
+	var user_id = 341;
+	var uSound = '24';
+	var utk = '4745b78574ff367858dd7b8935aa72b8';
+	var logged = 1;
+</script>
+<script data-cfasync="false">
+	var avatarMax = 10;
+	var coverMax = 10;
+	var riconMax = 10;
+	var fileMax = 100;
+	var speed = 3000;
+	var useLevel = 1;
+	var useBadge = 1;
+	var inOut = 0;
+	var uQuote = 50;
+	var upQuote = 50;
+	var priMin = 1;
+	var canScontent = 90;
+	var canContent = 100;
+	var canRoomLogs = 6;
+	var canReport = 1;
+	var maxEmo = '10';
+	var privLoad = 1;
+	var curSet = 138;
+	var systemLoaded = 0;
+</script>
+</head>
+<body>
+<div id="chat_head" class="bhead chat_head ">
+	<div class="head_option show_menu menutrig" data-menu="chat_left_menu">
+		<div class="btable notif_zone">
+			<div class="bcell_mid">
+				<i class="fa fa-bars i_btm"></i>
+			</div>
+		</div>
+		<div id="bottom_news_notify" class="head_notify bnotify"></div>
+	</div>
+		<div class="chat_head_logo">
+		<img id="main_logo" alt="logo" src="default_images/logo.png"/>
+	</div>
+		<div id="empty_top_mob" class="bcell_mid hpad10">
+	</div>
+	<div value="0" onclick="getPrivate();" id="get_private" class="privelem head_option menutrig ">
+		<div class="btable notif_zone">
+			<div class="bcell_mid">
+				<i class="fa fa-envelope i_btm"></i>
+			</div>
+		</div>
+		<div id="notify_private" class="head_notify bnotify"></div>
+	</div>
+		<div onclick="friendRequest();" class="head_option menutrig">
+		<div class="btable notif_zone">
+			<div class="bcell_mid">
+				<i class="fa fa-user-plus"></i>
+			</div>
+		</div>
+		<div id="notify_friends" class="head_notify bnotify"></div>
+	</div>
+		<div onclick="getNotification();" class="head_option menutrig">
+		<div class="btable notif_zone">
+			<div class="bcell_mid">
+				<i class="fa fa-bell"></i>
+			</div>
+		</div>
+		<div id="notify_notify" class="head_notify bnotify"></div>
+	</div>
+		<div data-menu="chat_main_menu" id="main_mob_menu" class="show_menu menutrig">
+		<img class="avatar_menu glob_av" src="avatar/avatar_user341_1719640702.jpg"/>
+		<img class="top_status status_icon" src="default_images/status/away.svg"/>
+	</div>
+</div>
+
+
+<div id="global_chat" class="backglob chatheight" >
+	
+	<div id="chat_left" class="left_hide back_panel rborder bshadow pheight">
+		<div id="left_content">
+			<div id="left_panel_bar" class="btable bborder panel_bar">
+				<div id="leftpanel_head" class="left_head_empty bcell_mid">
+				</div>
+				<div class="left_bar_item" onclick="resetLeftPanel();">
+					<i class="fa fa-times"></i>
+				</div>
+			</div>
+			<div id="chat_left_data" class="clheight">
+			</div>
+		</div>
+	</div>
+	
+	<div id="chat_center" class="chatheight" style="position:relative;">
+		<div  id="container_chat">
+			<div id="wrap_chat">
+				<div id="chat_toping" class="chat_topping">
+					<!--
+					you can add content to the top of chat by editing file located in
+					chat_element / top.php
+					-->
+									</div>
+				<div id="warp_show_chat">
+					<div id="container_show_chat">
+						<div id="inside_wrap_chat">
+							<ul class="back_chat" id="show_chat" value="1">
+								<ul id="chat_logs_container">
+								</ul>
+							</ul>
+						</div>
+						<div value="0" id="main_emoticon" class="back_box bshadow">
+							<div class="emo_head bborder main_emo_head">
+																	<div data="base_emo" class="bselected emo_menu emo_menu_item"><img class="emo_select" src="emoticon_icon/base_emo.png"/></div>
+									<div data="18plus" class="emo_menu emo_menu_item"><img class="emo_select" src="emoticon_icon/18plus.png"/></div><div data="dorp" class="emo_menu emo_menu_item"><img class="emo_select" src="emoticon_icon/dorp.png"/></div><div data="food" class="emo_menu emo_menu_item"><img class="emo_select" src="emoticon_icon/food.png"/></div><div data="moving" class="emo_menu emo_menu_item"><img class="emo_select" src="emoticon_icon/moving.png"/></div><div data="sticker_EK" class="emo_menu emo_menu_item"><img class="emo_select" src="emoticon_icon/sticker_EK.png"/></div><div data="sticker_groot" class="emo_menu emo_menu_item"><img class="emo_select" src="emoticon_icon/sticker_groot.png"/></div>																<div class="empty_emo">
+								</div>
+								<div class="emo_menu" onclick="hideEmoticon();">
+									<i class="fa fa-times"></i>
+								</div>
+							</div>
+							<div id="main_emo" class="emo_content">
+								<div class="emoticon"><img  class="lazy memot" data=":1f447:" title=":1f447:" data-src="emoticon/1f447.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":1f448:" title=":1f448:" data-src="emoticon/1f448.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":1f449:" title=":1f449:" data-src="emoticon/1f449.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":1f60d:" title=":1f60d:" data-src="emoticon/1f60d.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":1f929:" title=":1f929:" data-src="emoticon/1f929.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":261d:" title=":261d:" data-src="emoticon/261d.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":Thinking:" title=":Thinking:" data-src="emoticon/Thinking.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":amazing:" title=":amazing:" data-src="emoticon/amazing.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":angel:" title=":angel:" data-src="emoticon/angel.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":angry:" title=":angry:" data-src="emoticon/angry.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":anxious:" title=":anxious:" data-src="emoticon/anxious.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":bad:" title=":bad:" data-src="emoticon/bad.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":bigsmile:" title=":bigsmile:" data-src="emoticon/bigsmile.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":blink:" title=":blink:" data-src="emoticon/blink.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":cat2:" title=":cat2:" data-src="emoticon/cat2.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":chin:" title=":chin:" data-src="emoticon/chin.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":cool:" title=":cool:" data-src="emoticon/cool.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":crank:" title=":crank:" data-src="emoticon/crank.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":crisped:" title=":crisped:" data-src="emoticon/crisped.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":cry:" title=":cry:" data-src="emoticon/cry.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":cry2:" title=":cry2:" data-src="emoticon/cry2.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":daydream:" title=":daydream:" data-src="emoticon/daydream.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":dead:" title=":dead:" data-src="emoticon/dead.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":desperate:" title=":desperate:" data-src="emoticon/desperate.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":devil:" title=":devil:" data-src="emoticon/devil.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":dog:" title=":dog:" data-src="emoticon/dog.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":doubt:" title=":doubt:" data-src="emoticon/doubt.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":feelgood:" title=":feelgood:" data-src="emoticon/feelgood.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":flower:" title=":flower:" data-src="emoticon/flower.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":flower2:" title=":flower2:" data-src="emoticon/flower2.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":flower3:" title=":flower3:" data-src="emoticon/flower3.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":gift.512x471:" title=":gift.512x471:" data-src="emoticon/gift.512x471.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":good:" title=":good:" data-src="emoticon/good.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":happy:" title=":happy:" data-src="emoticon/happy.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":happy3:" title=":happy3:" data-src="emoticon/happy3.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":heart:" title=":heart:" data-src="emoticon/heart.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":heartstar:" title=":heartstar:" data-src="emoticon/heartstar.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":hilarious:" title=":hilarious:" data-src="emoticon/hilarious.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":hmm:" title=":hmm:" data-src="emoticon/hmm.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":hoo:" title=":hoo:" data-src="emoticon/hoo.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":hug:" title=":hug:" data-src="emoticon/hug.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":idontcare:" title=":idontcare:" data-src="emoticon/idontcare.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":kiss2:" title=":kiss2:" data-src="emoticon/kiss2.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":kiss3:" title=":kiss3:" data-src="emoticon/kiss3.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":kusje:" title=":kusje:" data-src="emoticon/kusje.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":love:" title=":love:" data-src="emoticon/love.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":med:" title=":med:" data-src="emoticon/med.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":medsmile:" title=":medsmile:" data-src="emoticon/medsmile.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":muted:" title=":muted:" data-src="emoticon/muted.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":nana:" title=":nana:" data-src="emoticon/nana.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":neutral:" title=":neutral:" data-src="emoticon/neutral.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":noooo:" title=":noooo:" data-src="emoticon/noooo.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":ohjee:" title=":ohjee:" data-src="emoticon/ohjee.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":omg:" title=":omg:" data-src="emoticon/omg.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":pokerface:" title=":pokerface:" data-src="emoticon/pokerface.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":reverse:" title=":reverse:" data-src="emoticon/reverse.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":sad:" title=":sad:" data-src="emoticon/sad.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":sarcas:" title=":sarcas:" data-src="emoticon/sarcas.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":scared:" title=":scared:" data-src="emoticon/scared.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":sick2:" title=":sick2:" data-src="emoticon/sick2.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":sleep:" title=":sleep:" data-src="emoticon/sleep.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":smile:" title=":smile:" data-src="emoticon/smile.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":smileface:" title=":smileface:" data-src="emoticon/smileface.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":smileteeth:" title=":smileteeth:" data-src="emoticon/smileteeth.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":sunflower:" title=":sunflower:" data-src="emoticon/sunflower.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":tongue:" title=":tongue:" data-src="emoticon/tongue.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":tongue2:" title=":tongue2:" data-src="emoticon/tongue2.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":toro:" title=":toro:" data-src="emoticon/toro.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":totalangry:" title=":totalangry:" data-src="emoticon/totalangry.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":totallove:" title=":totallove:" data-src="emoticon/totallove.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":verysad:" title=":verysad:" data-src="emoticon/verysad.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":wc:" title=":wc:" data-src="emoticon/wc.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":whaaa:" title=":whaaa:" data-src="emoticon/whaaa.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy memot" data=":whocare:" title=":whocare:" data-src="emoticon/whocare.png" src="default_images/misc/holder.png"/></div>							</div>
+						</div>
+						<div id="main_input_extra" class="bshadow back_box">
+														<div class="sub_options">
+								<img src="default_images/icons/upload.svg"/>
+								<input id="chat_file" class="up_input" onchange="uploadChatFile();" type="file"/>
+							</div>
+													</div>
+						<div id="quote_controller" class="qwraper back_quote bshadow">
+							<div id="quote_control" class="qcontrol" data="0">
+								<div class="qavatarwrap">
+									<img id="quote_avatar" class="qavatar" src=""/>
+								</div>
+								<div class="qusername_wrap">
+									<p class="text_xsmall bold quotequote theme_color">Citaat</p>
+									<p id="quoted_user" class="qusername"></p>
+								</div>
+								<div class="qcancel" onclick="resetQuote();">
+									<i class="fa fa-times"></i>
+								</div>
+							</div>
+						</div>
+						<div id="main_progress" class="uprogress">
+							<div class="uprogress_wrap">
+								<div id="mprogress" class="uprogress_progress">
+								</div>
+								<div class="uprogress_content btable">
+									<div class="bcell_mid uprogress_text">
+										<p class="bold text_small"><i class="fa fa-upload"></i> Upload</p>
+									</div>
+									<div class="bcell_mid uprogress_icon" onclick="cancelMainUp();">
+										<i class="fa fa-times"></i>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="top_chat_container" class="back_input input_wrap">
+					<div id="container_input" class="no_rtl hidden">
+						<form id="main_input" name="chat_data" action="" method="post">
+							<div class="input_table">
+								<div id="ok_sub_item" class="input_item main_item base_main sub_hidden" onclick="getChatSub();">
+									<i class="fa fa-plus input_icon bblock"></i>
+								</div>
+								<div value="0" class="input_item main_item base_main" onclick="showEmoticon();" id="emo_item">
+									<i class="fa fa-smile-o bblock"></i>
+								</div>
+								<div id="main_input_box" class="td_input">
+									<input data-paste="1" type="text" spellcheck="false" name="content" placeholder="Typ een bericht ..." maxlength="300" id="content" autocomplete="off"/>
+								</div>
+								<div id="inputt_right" class="main_item">
+									<button type="submit"  class="send_btn" id="submit_button"><i class="fa fa-paper-plane"></i></button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div id="main_disabled" class="hidden">
+						<div id="disabled_content" class="btable">
+							<div class="bcell_mid bellips centered_element hpad10">
+								Chat uitgeschakeld							</div>
+						</div>
+					</div>
+					<div id="main_load">
+						<div id="main_load_content">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="private_center" class="privelem privhide pboxed">
+		<div id="private_box" class="privelem back_priv prifoff ">
+			<div class="top_panel btable back_ptop" id="private_top">
+				<div id="private_av_wrap" class="bcell_mid">
+					<img data="" id="private_av" class="get_info" src="">
+				</div>
+				<div onclick="" id="private_name" class="bcell_mid bellips">
+					<p class="bellips"></p>
+				</div>
+				<div id="private_boxing" onclick="privateBox();" class="private_opt fhide">
+					<i class="fa fa-compress"></i>
+				</div>
+				<div id="private_paneling" onclick="privatePanel();" class="private_opt">
+					<i class="fa fa-expand"></i>
+				</div>
+				<div id="priv_minimize" onclick="togglePrivate(1);" class="private_opt">
+					<i class="fa fa-minus"></i>
+				</div>
+				<div id="private_min" data-menu="private_opt" class="show_menu menutrig private_opt">
+					<i class="fa fa-cog"></i>
+				</div>
+				<div id="private_close" class="private_opt">
+					<i class="fa fa-times"></i>
+				</div>
+			</div>
+			<div id="private_wrap_content" class="pcontent">
+				<div id="private_content" class="back_priv pcontent" value="1">
+					<div id="inside_wrap_private">
+						<ul id="show_private_wrap">
+							<ul id="show_private">
+							</ul>
+						</ul>
+					</div>
+				</div>
+				<div id="privspin" class="large_spinner">
+					<i class="fa fa-circle-o-notch fa-spin fa-fw bspin boom_spinner"></i>
+				</div>
+				<div id="priv_input_extra" class="back_box bshadow">
+										<div class="psub_options">
+						<img src="default_images/icons/upload.svg"/>
+						<input id="private_file" class="up_input" onchange="uploadPrivateFile();" type="file"/>
+					</div>
+									</div>
+				<div id="pquote_controller" class="qwraper back_quote bshadow">
+					<div id="pquote_control" class="qcontrol" data="0">
+						<div class="qavatarwrap">
+							<img id="pquote_avatar" class="qavatar" src=""/>
+						</div>
+						<div class="qusername_wrap">
+							<p class="text_xsmall bold theme_color quotequote">Citaat</p>
+							<p id="pquoted_user" class="qusername"></p>
+						</div>
+						<div class="qcancel" onclick="resetPrivateQuote();">
+							<i class="fa fa-times"></i>
+						</div>
+					</div>
+				</div>
+				<div id="private_opt" class="sysmenu float_menu back_menu bshadow">
+					<div class="submenu_item submenu" onclick="ignoreThisUser();">
+						<div class="btable">
+		<div class="subi subm_icon bcell_mid">
+		<i class="fa fa-ban"></i>
+	</div>
+		<div class="bcell_mid">
+		<p class="subm_title">Negeer</p>
+				<p class="subm_sub sub_text bellips">Voeg gebruiker toe aan ignore</p>
+			</div>
+</div>					</div>
+										<div class="submenu_item submenu" onclick="reportPrivateLog();">
+						<div class="btable">
+		<div class="subi subm_icon bcell_mid">
+		<i class="fa fa-exclamation-circle"></i>
+	</div>
+		<div class="bcell_mid">
+		<p class="subm_title">Rapporteer</p>
+				<p class="subm_sub sub_text bellips">Report deze content</p>
+			</div>
+</div>					</div>
+										<div class="submenu_item submenu" onclick="getPrivateSettings();">
+						<div class="btable">
+		<div class="subi subm_icon bcell_mid">
+		<i class="fa fa-cogs"></i>
+	</div>
+		<div class="bcell_mid">
+		<p class="subm_title">Privé instellingen</p>
+				<p class="subm_sub sub_text bellips">Privé voorkeuren</p>
+			</div>
+</div>					</div>
+									</div>
+				<div id="private_emoticon" class="back_box bshadow">
+					<div class="emo_head bborder private_emo_head">
+													<div data="base_emo" class="bselected emo_menu emo_menu_item_priv"><img class="emo_select" src="emoticon_icon/base_emo.png"/></div>
+							<div data="18plus" class="emo_menu emo_menu_item_priv"><img class="emo_select" src="emoticon_icon/18plus.png"/></div><div data="dorp" class="emo_menu emo_menu_item_priv"><img class="emo_select" src="emoticon_icon/dorp.png"/></div><div data="food" class="emo_menu emo_menu_item_priv"><img class="emo_select" src="emoticon_icon/food.png"/></div><div data="moving" class="emo_menu emo_menu_item_priv"><img class="emo_select" src="emoticon_icon/moving.png"/></div><div data="sticker_EK" class="emo_menu emo_menu_item_priv"><img class="emo_select" src="emoticon_icon/sticker_EK.png"/></div><div data="sticker_groot" class="emo_menu emo_menu_item_priv"><img class="emo_select" src="emoticon_icon/sticker_groot.png"/></div>												<div class="empty_emo">
+						</div>
+						<div class="emo_menu" id="emo_close_priv" onclick="hidePrivEmoticon();">
+							<i class="fa fa-times"></i>
+						</div>
+					</div>
+					<div id="private_emo" class="emo_content_priv">
+						<div class="emoticon"><img  class="lazy pemot" data=":1f447:" title=":1f447:" data-src="emoticon/1f447.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":1f448:" title=":1f448:" data-src="emoticon/1f448.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":1f449:" title=":1f449:" data-src="emoticon/1f449.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":1f60d:" title=":1f60d:" data-src="emoticon/1f60d.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":1f929:" title=":1f929:" data-src="emoticon/1f929.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":261d:" title=":261d:" data-src="emoticon/261d.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":Thinking:" title=":Thinking:" data-src="emoticon/Thinking.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":amazing:" title=":amazing:" data-src="emoticon/amazing.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":angel:" title=":angel:" data-src="emoticon/angel.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":angry:" title=":angry:" data-src="emoticon/angry.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":anxious:" title=":anxious:" data-src="emoticon/anxious.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":bad:" title=":bad:" data-src="emoticon/bad.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":bigsmile:" title=":bigsmile:" data-src="emoticon/bigsmile.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":blink:" title=":blink:" data-src="emoticon/blink.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":cat2:" title=":cat2:" data-src="emoticon/cat2.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":chin:" title=":chin:" data-src="emoticon/chin.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":cool:" title=":cool:" data-src="emoticon/cool.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":crank:" title=":crank:" data-src="emoticon/crank.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":crisped:" title=":crisped:" data-src="emoticon/crisped.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":cry:" title=":cry:" data-src="emoticon/cry.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":cry2:" title=":cry2:" data-src="emoticon/cry2.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":daydream:" title=":daydream:" data-src="emoticon/daydream.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":dead:" title=":dead:" data-src="emoticon/dead.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":desperate:" title=":desperate:" data-src="emoticon/desperate.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":devil:" title=":devil:" data-src="emoticon/devil.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":dog:" title=":dog:" data-src="emoticon/dog.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":doubt:" title=":doubt:" data-src="emoticon/doubt.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":feelgood:" title=":feelgood:" data-src="emoticon/feelgood.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":flower:" title=":flower:" data-src="emoticon/flower.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":flower2:" title=":flower2:" data-src="emoticon/flower2.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":flower3:" title=":flower3:" data-src="emoticon/flower3.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":gift.512x471:" title=":gift.512x471:" data-src="emoticon/gift.512x471.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":good:" title=":good:" data-src="emoticon/good.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":happy:" title=":happy:" data-src="emoticon/happy.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":happy3:" title=":happy3:" data-src="emoticon/happy3.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":heart:" title=":heart:" data-src="emoticon/heart.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":heartstar:" title=":heartstar:" data-src="emoticon/heartstar.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":hilarious:" title=":hilarious:" data-src="emoticon/hilarious.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":hmm:" title=":hmm:" data-src="emoticon/hmm.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":hoo:" title=":hoo:" data-src="emoticon/hoo.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":hug:" title=":hug:" data-src="emoticon/hug.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":idontcare:" title=":idontcare:" data-src="emoticon/idontcare.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":kiss2:" title=":kiss2:" data-src="emoticon/kiss2.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":kiss3:" title=":kiss3:" data-src="emoticon/kiss3.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":kusje:" title=":kusje:" data-src="emoticon/kusje.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":love:" title=":love:" data-src="emoticon/love.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":med:" title=":med:" data-src="emoticon/med.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":medsmile:" title=":medsmile:" data-src="emoticon/medsmile.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":muted:" title=":muted:" data-src="emoticon/muted.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":nana:" title=":nana:" data-src="emoticon/nana.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":neutral:" title=":neutral:" data-src="emoticon/neutral.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":noooo:" title=":noooo:" data-src="emoticon/noooo.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":ohjee:" title=":ohjee:" data-src="emoticon/ohjee.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":omg:" title=":omg:" data-src="emoticon/omg.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":pokerface:" title=":pokerface:" data-src="emoticon/pokerface.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":reverse:" title=":reverse:" data-src="emoticon/reverse.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":sad:" title=":sad:" data-src="emoticon/sad.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":sarcas:" title=":sarcas:" data-src="emoticon/sarcas.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":scared:" title=":scared:" data-src="emoticon/scared.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":sick2:" title=":sick2:" data-src="emoticon/sick2.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":sleep:" title=":sleep:" data-src="emoticon/sleep.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":smile:" title=":smile:" data-src="emoticon/smile.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":smileface:" title=":smileface:" data-src="emoticon/smileface.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":smileteeth:" title=":smileteeth:" data-src="emoticon/smileteeth.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":sunflower:" title=":sunflower:" data-src="emoticon/sunflower.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":tongue:" title=":tongue:" data-src="emoticon/tongue.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":tongue2:" title=":tongue2:" data-src="emoticon/tongue2.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":toro:" title=":toro:" data-src="emoticon/toro.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":totalangry:" title=":totalangry:" data-src="emoticon/totalangry.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":totallove:" title=":totallove:" data-src="emoticon/totallove.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":verysad:" title=":verysad:" data-src="emoticon/verysad.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":wc:" title=":wc:" data-src="emoticon/wc.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":whaaa:" title=":whaaa:" data-src="emoticon/whaaa.png" src="default_images/misc/holder.png"/></div><div class="emoticon"><img  class="lazy pemot" data=":whocare:" title=":whocare:" data-src="emoticon/whocare.png" src="default_images/misc/holder.png"/></div>					</div>
+				</div>
+				<div id="private_progress" class="uprogress">
+					<div class="uprogress_wrap">
+						<div id="pprogress" class="uprogress_progress">
+						</div>
+						<div class="uprogress_content btable">
+							<div class="bcell_mid uprogress_text">
+								<p class="bold text_small"><i class="fa fa-upload"></i> Upload</p>
+							</div>
+							<div class="bcell_mid uprogress_icon" onclick="cancelPrivateUp();">
+								<i class="fa fa-times"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="priv_input" class="back_pinput input_wrap">
+				<div id="private_input" class="no_rtl back_input">
+					<form id="message_form"  action="" method="post" name="private_form">
+						<div class="input_table">
+							<div id="ok_priv_item" class="input_item main_item sub_hidden" onclick="getPrivSub();">
+								<i class="fa fa-plus input_icon bblock"></i>
+							</div>
+							<div value="0" id="emo_item_priv" class="input_item main_item" onclick="showPrivEmoticon();">
+								<i class="fa fa-smile-o"></i>
+							</div>
+							<div id="private_input_box" class="td_input">
+								<input data-paste="1" spellcheck="false" id="message_content" placeholder="Typ een bericht ..." maxlength="200" autocomplete="off"/>
+							</div>
+							<div id="message_send" class="main_item">
+								<button class="send_btn" id="private_send"><i class="fa fa-paper-plane"></i></button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div id="private_disabled" class="hidden">
+					<div id="private_disable" class="btable">
+						<div class="bcell_mid bellips centered_element hpad10">
+							Privé uitgeschakeld						</div>
+					</div>
+				</div>
+				<div id="private_load">
+					<div id="private_load_content">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="chat_right" class="cright back_panel lborder bshadow pheight">
+		<div id="right_panel_bar" class="bborder panel_bar">
+			<div onclick="closeRight();" class="panel_bar_item">
+				<i class="fa fa-times"></i>
+			</div>
+			<div class="bcell_mid">
+			</div>
+			<div id="users_option"title="Leden lijst" class="bselected panel_option" onclick="userReload(1);">
+				<i class="fa fa-users"></i>
+			</div>
+						<div id="friends_option" title="Vriendenlijst" class="panel_option" onclick="myFriends(1);">
+				<i class="fa fa-user"></i>
+			</div>
+						<div id="search_option" title="Zoek gebruiker" class="panel_option" onclick="getSearchUser();">
+				<i class="fa fa-search"></i>
+			</div>
+		</div>
+		<div id="chat_right_data" class="crheight">
+		</div>
+	</div>
+</div>
+
+<div id="wrap_footer" class="bfoot" data="1" >
+	<div id="my_menu">
+				<div class="show_menu footer_item menutrig" data-menu="player_menu" >
+			<i class="fa fa-play-circle footer_play i_btm"></i>
+		</div>
+				<div class="bcell_mid">
+		</div>
+		<div id="mstream" onclick="toggleStream(2)" class="footer_item streamhide">
+			<img id="mstream_img" src="default_images/icons/vidhide.svg"/>
+		</div>
+		<div id="mstream_audio" onclick="toggleStreamAudio(2)" class="footer_item streamhide">
+			<img id="mstream_img" src="default_images/icons/audiohide.svg"/>
+		</div>
+		<div id="dpriv" onclick="togglePrivate(2);" class="privelem footer_item privhide ">
+			<img id="dpriv_av" src=""/>
+			<div id="dpriv_notify" class="foot_notify bnotify">
+			</div>
+		</div>
+		<div id="rlist_open" onclick="toggleRight();" class="footer_item">
+			<i class="fa fa-bars i_btm"></i>
+		</div>
+	</div>
+</div>
+
+<div id="player_menu" class="float_menu back_menu sysmenu">
+	<div id="player_menu_content" class="float_content">
+		<div class="player_wrap hpad5">
+			<div id="current_player" class="cur_play">
+				<div class="btable bborder vpad10">
+					<div id="player_actual_status" class="splay_btn bcell_mid turn_on_play">
+						<i id="current_play_btn" class="fa fa-play-circle i_btm"></i>
+					</div>
+					<div class="bcell_mid hpad5">
+						<p class="text_xsmall theme_color">Station</p>
+						<p id="current_station">CoolRunningRadio</p>
+					</div>
+					<div data-menu="station_menu" class="bcell_mid player_change show_menu">
+						<i class="fa fa-list"></i>
+					</div>
+				</div>
+			</div>
+			<div class="player_volume">
+				<div id="sound_display" class="bcell_mid">
+					<i class="fa fa-volume-down show_sound"></i>
+				</div>
+				<div id="player_volume" class="bcell_mid boom_slider">
+					<div id="slider"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="station_menu" class="float_menu back_menu sysmenu">
+	<div class="ftop_elem float_top">
+		<div class="ftop_opt_btn show_menu" data-menu="player_menu">
+			<i class="fa fa-chevron-left"></i> 
+		</div>
+		<div class="ftop_opt_text">
+			Station lijst		</div>
+	</div>
+	<div id="station_menu_content" class="float_content">
+		<div class="radio_item brad5 bbackhover sub_list_item" data="http://stream.100p.nl/100pctnl.mp3.m3u"><div class="sub_list_name">100% NL</div></div><div class="radio_item brad5 bbackhover sub_list_item" data="https://icecast.omroep.nl/3fm-bb-mp3"><div class="sub_list_name">3fm</div></div><div class="radio_item brad5 bbackhover sub_list_item" data="https://stream.qmusic.nl/top40/aachigh"><div class="sub_list_name">top40</div></div><div class="radio_item brad5 bbackhover sub_list_item" data="https://27753.live.streamtheworld.com/RADIO10.mp3"><div class="sub_list_name">Radio 10</div></div><div class="radio_item brad5 bbackhover sub_list_item" data="http://playerservices.streamtheworld.com/api/livestream-redirect/RADIO538.mp3"><div class="sub_list_name">Radio 538</div></div><div class="radio_item brad5 bbackhover sub_list_item" data="https://server6.radio-streams.net/proxy/upj/stream"><div class="sub_list_name">CoolRunningRadio</div></div><div class="radio_item brad5 bbackhover sub_list_item" data="https://icecast.vrtcdn.be/radio1-high.mp3"><div class="sub_list_name">België 1</div></div>	</div>
+</div>
+
+
+<div id="private_menu" data="private_menu_content" class="sysmenu back_menu float_menu">
+	<div class="ftop_elem float_top">
+		<div class="ftop_opt_icon">
+			<i class="fa fa-comments"></i> 
+		</div>
+		<div class="ftop_opt_text">
+			Privé		</div>
+		<div class="ftop_empty">
+		</div>
+		<div class="ftop_action" onclick="clearPrivateList();">
+			<i class="fa fa-trash"></i>
+		</div>
+	</div>
+	<div class="float_content">
+		<div id="private_menu_content">
+		</div>
+	</div>
+</div>
+
+
+<div id="report_menu" data="report_menu_content" class="sysmenu back_menu float_menu">
+	<div class="ftop_elem float_top">
+		<div class="ftop_opt_icon">
+			<i class="fa fa-flag"></i> 
+		</div>
+		<div class="ftop_opt_text">
+			Rapporteer		</div>
+	</div>
+	<div class="float_content">
+		<div id="report_menu_content">
+		</div>
+	</div>
+</div>
+
+
+<div id="friends_menu" data="friends_menu_content" class="sysmenu back_menu float_menu">
+	<div class="ftop_elem float_top">
+		<div class="ftop_opt_icon">
+			<i class="fa fa-user-plus"></i> 
+		</div>
+		<div class="ftop_opt_text">
+			Vriendschap verzoek		</div>
+	</div>
+	<div id="friends_menu_content" class="float_content">
+	</div>
+</div>
+
+
+<div id="notification_menu" data="notification_menu_content" class="sysmenu back_menu float_menu">
+	<div id="float_top_ref" class="ftop_elem float_top">
+		<div class="ftop_opt_icon">
+			<i class="fa fa-bell"></i> 
+		</div>
+		<div class="ftop_opt_text">
+			Notificatie		</div>
+		<div class="ftop_action" onclick="clearNotification();">
+			<i class="fa fa-trash"></i>
+		</div>
+	</div>
+	<div class="float_content">
+		<div id="notification_menu_content">
+		</div>
+	</div>
+</div>
+
+
+<div id="status_menu" class="sysmenu back_menu float_menu">
+	<div class="ftop_elem float_top">
+		<div class="ftop_opt_btn show_menu" data-menu="chat_main_menu">
+			<i class="fa fa-chevron-left"></i> 
+		</div>
+		<div class="ftop_opt_text">
+			Status		</div>
+	</div>
+	<div class="float_content">
+		<div id="status_menu_content">
+			<div class="status_option bhover fmenu_item" onclick="updateStatus(1);" data="1">
+				<div class="fmenu_icon"><img class="icon_status" src="default_images/status/online.svg"/></div>
+				<div class="fmenu_text">Online</div>
+			</div><div class="status_option bhover fmenu_item" onclick="updateStatus(2);" data="2">
+				<div class="fmenu_icon"><img class="icon_status" src="default_images/status/away.svg"/></div>
+				<div class="fmenu_text">Even weg</div>
+			</div><div class="status_option bhover fmenu_item" onclick="updateStatus(3);" data="3">
+				<div class="fmenu_icon"><img class="icon_status" src="default_images/status/busy.svg"/></div>
+				<div class="fmenu_text">Bezet</div>
+			</div><div class="status_option bhover fmenu_item" onclick="updateStatus(4);" data="4">
+				<div class="fmenu_icon"><img class="icon_status" src="default_images/status/voetbal.svg"/></div>
+				<div class="fmenu_text">Voetbal kijken</div>
+			</div><div class="status_option bhover fmenu_item" onclick="updateStatus(5);" data="5">
+				<div class="fmenu_icon"><img class="icon_status" src="default_images/status/working.svg"/></div>
+				<div class="fmenu_text">Aan het werk</div>
+			</div><div class="status_option bhover fmenu_item" onclick="updateStatus(6);" data="6">
+				<div class="fmenu_icon"><img class="icon_status" src="default_images/status/gamen.svg"/></div>
+				<div class="fmenu_text">Gamen</div>
+			</div><div class="status_option bhover fmenu_item" onclick="updateStatus(7);" data="7">
+				<div class="fmenu_icon"><img class="icon_status" src="default_images/status/F1.svg"/></div>
+				<div class="fmenu_text">F1 kijken</div>
+			</div><div class="status_option bhover fmenu_item" onclick="updateStatus(8);" data="8">
+				<div class="fmenu_icon"><img class="icon_status" src="default_images/status/eten.svg"/></div>
+				<div class="fmenu_text">Eten</div>
+			</div><div class="status_option bhover fmenu_item" onclick="updateStatus(9);" data="9">
+				<div class="fmenu_icon"><img class="icon_status" src="default_images/status/tv-kijken.svg"/></div>
+				<div class="fmenu_text">TV kijken</div>
+			</div>		</div>
+	</div>
+</div>
+
+<div id="bank_menu" class="sysmenu back_menu float_menu">
+	<div class="ftop_elem float_top">
+		<div class="ftop_opt_btn show_menu" data-menu="chat_main_menu">
+			<i class="fa fa-chevron-left"></i> 
+		</div>
+		<div class="ftop_opt_text">
+			Goud balans		</div>
+	</div>
+	<div class="float_content">
+		<div id="bank_menu_content">
+			<div class="hpad10 bpad10">
+				<div class="vpad10">
+					<p class="text_xsmall bold bpad5">Goud</p>
+					<div class="btable">
+						<div class="bcell_mid gold_icon">
+							<img src="default_images/icons/gold.svg"/>
+						</div>
+						<div id="gold" class="bcell_mid gold_text bold hpad5">
+							12544						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="room_options_menu" class="sysmenu back_menu float_menu">
+	<div class="ftop_elem float_top">
+		<div class="ftop_opt_btn show_menu" data-menu="chat_left_menu">
+			<i class="fa fa-chevron-left"></i> 
+		</div>
+		<div class="ftop_opt_text">
+			Kamer opties		</div>
+	</div>
+	<div id="room_options_menu_content" class="float_content">
+		<div class="float_section bborder">
+			<div class="fmenu_item bhover mmenu_item" onclick="openRoomSettings();">
+				<div class="fmenu_icon">
+					<i class="fa fa-cogs menui"></i>
+				</div>
+				<div class="fmenu_text">
+					Instellingen				</div>
+			</div>
+			<div class="fmenu_item bhover mmenu_item" onclick="openRoomStaff();">
+				<div class="fmenu_icon">
+					<i class="fa fa-shield menui"></i>
+				</div>
+				<div class="fmenu_text">
+					Beheer personeel				</div>
+			</div>
+		</div>
+		<div class="float_section">
+			<div class="fmenu_item bhover mmenu_item" onclick="openRoomActions();">
+				<div class="fmenu_icon">
+					<i class="fa fa-flash menui"></i>
+				</div>
+				<div class="fmenu_text">
+					Beheer actie				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="chat_left_menu" class="sysmenu back_menu float_menu">
+	<div class="float_ctop" id="mmenul_top">
+		<div class="btable pad10">
+			<div class="bcell_mid roomcv">
+				<img class="glob_ricon" src="room_icon/room_icon1_1715419540.jpg"/>
+			</div>
+			<div class="bcell_mid hpad10">
+				<div class="mroom_text sub_text">
+					Huidige kamer				</div>
+				<div class="mroom_name bellips glob_rname">
+					Dorpshuis				</div>
+			</div>
+			<div class="bcell_mid mroom_change room_granted nogranted show_menu" data-menu="room_options_menu">
+				<i class="fa fa-cog"></i>
+			</div>
+		</div>
+	</div>
+	<div id="left_menu_content" class="float_content">
+		<div id="left_main_content">
+			<div id="room_menu" class="fmenu_item bhover lmenu_item" onclick="getRoomList();">
+				<div class="fmenu_icon">
+					<i class="fa fa-home menui"></i>
+				</div>
+				<div class="fmenu_text left_text">
+					Kamer lijst				</div>
+			</div>
+						<div id="wall_menu" class="fmenu_item bhover lmenu_item" onclick="getWall();">
+				<div class="fmenu_icon">
+					<i class="fa fa-rss menui"></i>
+				</div>
+				<div class="fmenu_text">
+					Vrienden wall				</div>
+			</div>
+						<div id="news_menu" class="fmenu_item bhover lmenu_item" onclick="getNews();">
+				<div class="fmenu_icon">
+					<i class="fa fa-newspaper-o menui"></i>
+				</div>
+				<div class="fmenu_text">
+					Nieuws				</div>
+				<div class="fmenu_notify">
+					<div id="news_notify" class="fnotify bnotify"></div>
+				</div>
+			</div>
+						<div id="leader_menu" class="fmenu_item bhover mmenu_item" onclick="getLeaderboard();">
+				<div class="fmenu_icon">
+					<i class="fa fa-trophy menui"></i>
+				</div>
+				<div class="fmenu_text">
+					Leaderboard				</div>
+			</div>
+					</div>
+	</div>
+</div>
+
+<div id="chat_main_menu" class="sysmenu back_menu float_menu">
+	<div class="float_ctop" id="mmenu_top">
+		<div class="btable pad10">
+			<div class="bcell_mid avmmenu">
+				<img class="glob_av" src="avatar/avatar_user341_1719640702.jpg"/>
+			</div>
+			<div class="bcell_mid hpad10">
+				<div class="menuranktxt">
+				<img src="default_images/rank/vip.svg" data-r="50" class="menuranking"/> Ereburger				</div>
+				<div class="menuname bellips globname">
+					Chanty				</div>
+			</div>
+			<div data-menu="status_menu" class="bcell_mid editstatus show_menu">
+				<img class="stat_icon status_icon" src="default_images/status/away.svg"/>
+			</div>
+		</div>
+	</div>
+	<div class="float_content">
+		<div id="section_tmmenu" class="float_section bborder tpad0">
+						<div class="fmenu_item bhover mmenu_item" onclick="viewLevelStatus(341);">
+				<div class="fmenu_icon">
+					<i class="fa fa-level-up menui"></i>
+				</div>
+				<div class="fmenu_text">
+					Niveau-informatie				</div>
+			</div>
+									<div data-menu="bank_menu" class="fmenu_item bhover mmenu_item show_menu">
+				<div class="fmenu_icon">
+					<i class="fa fa-database menui"></i>
+				</div>
+				<div class="fmenu_text">
+					Goud balans				</div>
+			</div>
+						<div class="fmenu_item bhover mmenu_item" onclick="editProfile();">
+				<div class="fmenu_icon">
+					<i class="fa fa-user-circle menui"></i>
+				</div>
+				<div class="fmenu_text">
+					Wijzig Profiel				</div>
+			</div>
+					</div>
+		<div id="section_bmmenu" class="float_section bpad0">
+									<div class="fmenu_item bhover mmenu_item" onclick="logOut();">
+				<div class="fmenu_icon">
+					<i class="fa fa-sign-out menui"></i>
+				</div>
+				<div class="fmenu_text">
+					Uitloggen				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="av_menu" class="avmenu bshadow back_menu">
+	<div id="avcontent" class="avcontent">
+	</div>
+</div>
+<div id="log_menu" class="bshadow back_menu">
+	<div id="logmenu" class="logmenu">
+	</div>
+</div>
+
+
+<div id="monitor_data" onclick="getMonitor();">
+	<p>Active: <span id="current_active">0</span></p>
+	<p>Count: <span id="logs_counter">0</span></p>
+	<p>Speed: <span id="current_speed">0</span></p>
+	<p>Latency: <span id="current_latency">0</span></p>
+</div>
+<div id="action_menu" class="bshadow hidden">
+	<div class="avheader">
+	<div class="avtop btable bhead topcard avbackground">
+		<div class="bcell_mid">
+			<div class="avtopmenu btable">
+				<div class="bcell_mid">
+					<div class="btable">
+						<div class="bcell">
+							<div id="clevel" class="lite_olay clevel_item clevel">
+								<img src="default_images/icons/level.svg"/> <span class="clevel_count"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="btable avavpart">
+				<div class="bcell_mid">
+				</div>
+				<div class="bcell_mid avtop_content brelative">
+					<img class="avavatar"  src=""/>
+				</div>
+				<div class="bcell_mid">
+				</div>
+			</div>
+			<div class="btable avdetails">
+				<p class="avusername cover_text bellips"></p>
+				<p class="gentext cover_text text_small bellips"></p>
+			</div>
+			<div class="btable tpad3">
+				<div class="bcell_mid avtopopt">
+					<img class="avflag" src=""/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="avself card_menu back_menu bottomcard">
+	<div data="" value="" data-av="" class="avset bmenu avitem get_info">
+		<i class="fa fa-user-circle-o default_color"></i> Bekijk profiel	</div>
+	<div data="" value="" data-av="" class="avset bmenu avitem" onclick="editProfile();">
+		<i class="fa fa-edit theme_color"></i> Wijzig	</div>
+</div>
+<div class="avbot card_menu back_menu bottomcard">
+	<div data="" value="" data-av="" class="avset bmenu avitem get_info">
+		<i class="fa fa-user-circle-o default_color"></i> Bekijk profiel	</div>
+	<div data="" value="" data-av=""  class="avset avpriv bmenu avitem gprivate">
+		<i class="fa fa-comments theme_color"></i> Privé	</div>
+</div>
+<div class="avstaff card_menu back_menu bottomcard">
+	<div data="" value="" data-av="" class="avset bmenu avitem get_info">
+		<i class="fa fa-user-circle-o default_color"></i> Bekijk profiel	</div>
+	<div data="" value="" data-av=""  class="avset avpriv bmenu avitem gprivate">
+		<i class="fa fa-comments theme_color"></i> Privé	</div>
+	<div data="" value="" data-av="" class="avset bmenu avitem get_actions avactions">
+		<i class="fa fa-check error"></i> Actie	</div>
+</div>
+<div class="avroomstaff card_menu back_menu bottomcard">
+	<div data="" value="" data-av="" class="avset bmenu avitem get_info">
+		<i class="fa fa-user-circle-o default_color"></i> Bekijk profiel	</div>
+	<div data="" value="" data-av=""  class="avset avpriv bmenu avitem gprivate ">
+		<i class="fa fa-comments theme_color"></i> Privé	</div>
+	<div data="" value="" data-av="" class="avset bmenu avitem get_actions avactions">
+		<i class="fa fa-check error"></i> Actie	</div>
+</div>
+<div class="avother card_menu back_menu bottomcard">
+	<div data="" value="" data-av="" class="avset bmenu avitem get_info">
+		<i class="fa fa-user-circle-o default_color"></i> Bekijk profiel	</div>
+	<div data="" value="" data-av=""  class="avset avpriv bmenu avitem gprivate">
+		<i class="fa fa-comments theme_color"></i> Privé	</div>
+	<div data="" value="" data-av="" class="avset bmenu avitem get_actions avactions">
+		<i class="fa fa-check error"></i> Actie	</div>
+</div></div>
+<div id="log_menu_content" class="bshadow hidden">
+	<div data="" onclick="quoteLog(this);" class="submenu_item submenu logmm log_quote">
+	<div class="btable">
+		<div class="subi subm_icon bcell_mid">
+		<i class="fa fa-reply"></i>
+	</div>
+		<div class="bcell_mid">
+		<p class="subm_title">Citaat</p>
+				<p class="subm_sub sub_text bellips">Reageer op dit bericht</p>
+			</div>
+</div></div>
+<div data="" onclick="hideLog(this);" class="submenu_item submenu logmm log_hide">
+	<div class="btable">
+		<div class="subi subm_icon bcell_mid">
+		<i class="fa fa-eye-slash"></i>
+	</div>
+		<div class="bcell_mid">
+		<p class="subm_title">Verbergen</p>
+				<p class="subm_sub sub_text bellips">Verwijderen van mijn scherm</p>
+			</div>
+</div></div>
+<div data="" onclick="deleteLog(this);" class="submenu_item submenu logmm log_delete">
+	<div class="btable">
+		<div class="subi subm_icon bcell_mid">
+		<i class="fa fa-trash"></i>
+	</div>
+		<div class="bcell_mid">
+		<p class="subm_title">Verwijder</p>
+				<p class="subm_sub sub_text bellips">Wis deze inhoud</p>
+			</div>
+</div></div>
+<div data="" onclick="reportChatLog(this);" class="submenu_item submenu logmm log_report">
+	<div class="btable">
+		<div class="subi subm_icon bcell_mid">
+		<i class="fa fa-exclamation-circle"></i>
+	</div>
+		<div class="bcell_mid">
+		<p class="subm_title">Rapporteer</p>
+				<p class="subm_sub sub_text bellips">Report deze content</p>
+			</div>
+</div></div></div>
+<div id="private_actions" class="bshadow hidden">
+	<div data-id="" onclick="deletePrivateLog(this);" class="ppitem ppdel">
+	<i class="fa fa-trash"></i>
+</div>
+<div data-id="" onclick="quotePrivateLog(this);" class="ppitem ppquote">
+	<i class="fa fa-reply"></i>
+</div></div>
+<script data-cfasync="false">
+	var curPage = 'chat';
+	var roomTitle = 'Dorpshuis';
+	var user_room = 1;
+	var userAction = '1';
+	var	globNotify = 0;
+	var pCount = "904";
+	var uLevel = 21;
+	var ignoreList = new Set([]);
+</script>
+<script data-cfasync="false">
+	var source = "https://server6.radio-streams.net/proxy/upj/stream";
+</script>
+<script data-cfasync="false">
+
+var snippet = 'snippet';
+var youtubeLimit = 16;
+var youtubeMode = 1;
+var youtubeTarget = 0;
+
+getYoutube = function(md){
+	youtubeMode = md;
+	if(md == 2){
+		youtubeTarget = currentPrivate;
+	}
+	else {
+		youtubeTarget = 0;
+	}
+	$.post('addons/youtube/system/youtube_template.php', {
+		type: youtubeMode,
+		}, function(response) {
+			showEmptyModal(response, 400);
+			youtubeTemplate = response;
+	});
+}
+youtubeItemTemplate = function(youId, youTitle, youTumb){
+	ytmp = '';
+	ytmp += '<div onclick="sendYoutube(\''+youId+'\');" class="btable you_result">';
+	ytmp += '<div class="bcell pad5">';
+	ytmp += '<img class="you_tumb" src="'+youTumb+'" autoplay loop/>';
+	ytmp += '<div class="you_text"><p class="bold">'+youTitle+'</p></div>';
+	ytmp += '</div>';
+	ytmp += '</div>';
+	return ytmp;
+}
+
+startYoutubeSearch = function(event, item){
+	var youtubeContent = $(item).val();
+	if(event.keyCode == 13 && event.shiftKey == 0){
+		if (/^\s+$/.test(youtubeContent) || youtubeContent == ''){
+			return false;
+		}
+		else {
+			youtubeSearch(youtubeContent);
+		}
+	}
+}
+sendYoutubeMain = function(yid){
+	$.ajax({
+		url: "addons/youtube/system/youtube_main.php",
+		type: "post",
+		cache: false,
+		dataType: 'json',
+		data: { 
+			id: yid,
+		},
+		success: function(response){
+			if(response.code == 1){
+				appendSelfChatMessage(response.logs);
+			}
+			else {
+				callError(system.error);
+			}
+		},
+		error: function(){
+			callError(system.error);
+		}
+	});
+}
+sendYoutubePrivate = function(yid){
+	$.ajax({
+		url: "addons/youtube/system/youtube_private.php",
+		type: "post",
+		cache: false,
+		dataType: 'json',
+		data: { 
+			id: yid,
+			target: youtubeTarget,
+		},
+		success: function(response){
+			if(response.code == 1){
+				appendSelfPrivateMessage(response.logs);
+			}
+			else if(response.code == 99){
+				appendCannotPrivate();
+			}
+			else {
+				callError(system.error);
+			}
+		},
+		error: function(){
+			callError(system.error);
+		}
+	});
+}
+sendYoutube = function(yid){
+	hideModal();
+	if(youtubeMode == 1){
+		sendYoutubeMain(yid);
+	}
+	else if(youtubeMode == 2){
+		sendYoutubePrivate(yid);
+	}
+}
+youtubeSearch = function(event, item, t){
+	if(event.keyCode == 13 && event.shiftKey == 0){
+		var youtubeContent = $(item).val();
+		$('#find_youtube').val('');
+		if (/^\s+$/.test(youtubeContent) || youtubeContent == ''){
+			return false;
+		}
+		else{
+			$.ajax({
+				url: "addons/youtube/system/youtube_search.php",
+				type: "post",
+				cache: false,
+				dataType: 'json',
+				data: { 
+					type: t,
+					youtube_search: youtubeContent,
+				},
+				success: function(data){
+					if (typeof data == 'object' && data.pageInfo.totalResults > 0 && data.pageInfo.resultsPerPage > 0) {
+						$('#youtube_results').html('');
+						$('#youtube_results').scrollTop(0);
+						for (var i = 0; i < data.items.length; i++) {
+							$('#youtube_results').append(youtubeItemTemplate(data.items[i].id.videoId, data.items[i].snippet.title, data.items[i].snippet.thumbnails.medium.url));	
+						}
+					}
+					else{
+						$('#youtube_results').html(noDataTemplate());
+					}
+				},
+			});	
+		}
+	}
+}
+
+$(document).ready(function(){
+	appInputMenu('addons/youtube/files/youtube.svg', 'getYoutube(1);');
+	appPrivInputMenu('addons/youtube/files/youtube.svg', 'getYoutube(2);');
+	boomAddCss('addons/youtube/files/youtube.css');
+});
+
+</script>
+
+<script data-cfasync="false">
+vipClean = function(){
+	if(user_rank > 1){
+		$.post('addons/vip/system/vip_clean.php', { 
+			clean_vip: 1,
+			token: utk,
+			}, function(response) {
+		});
+	}
+}
+$(document).ready(function(){
+	cleanVip = setInterval(vipClean, 1200000);
+	vipClean();
+});
+</script>
+<script data-cfasync="false">
+openVip = function(){
+	$.post('addons/vip_gold/system/box/vip_box.php', { 
+		token: utk,
+		}, function(response) {
+			showModal(response, 540);
+	});
+}
+$(document).ready(function(){
+	boomAddCss('addons/vip_gold/files/vip_gold.css');
+	appLeftMenu('diamond', 'Koop VIP', 'openVip();', 'vip_addons_menu');
+});
+</script>
+<script data-cfasync="false">
+var requestType = 'reg';
+var superbot = 'Dorpsgek';
+var superLow = 'dorpsgek';
+var superbotId = '5';
+var checkbot = '';
+var privBot = '';
+
+sendSuperbotMain = function(){
+	$.post('addons/superbot/system/superbot_main.php', { 
+		search: checkbot,
+		name: superbot,
+		type: requestType,
+		}, function(response) {
+
+	});
+};
+sendSuperbotPrivate = function(){
+	$.post('addons/superbot/system/superbot_private.php', { 
+		search: privBot,
+		name: superbot,
+		bid: currentPrivate,
+		}, function(response) {
+
+	});
+};
+
+$(document).ready(function(){
+
+	$('#main_input').submit(function(event){
+		checkbot = $('#content').val();
+		var checkbotLow = $('#content').val().toLowerCase();
+		if( checkbot.match(superbot) || checkbotLow.match(superLow) ){
+			setTimeout(sendSuperbotMain, 1000);
+		}
+		else {
+			checkbot = '';
+		}
+	});
+	$('#private_input').submit(function(event){
+		privBot = $('#message_content').val();
+		if(privBot == '' || /^\s+$/.test($('#message_content').val()) ){
+			event.preventDefault();
+		}
+		else {
+			if(currentPrivate == superbotId){
+				setTimeout(sendSuperbotPrivate, 1000);
+			}
+			else {
+				privBot = '';
+			}
+		}
+	});
+});
+</script>
+<script data-cfasync="false" type="text/javascript">
+
+var paintMode = 1;
+var paintTarget = 0;
+var paintBackground = '#fff';
+var paintCurrent = '#000';
+
+paintIt = function(md){
+	paintMode = md;
+	paintBackground = '#fff';
+	paintCurrent = '#000';
+	if(md == 2){
+		paintTarget = currentPrivate;
+	}
+	else {
+		paintTarget = 0;
+	}
+	$.post('addons/paintit/system/paint_template.php', {
+		}, function(response) {
+			showEmptyModal(response, 600);
+			var el = document.getElementById('sketchpad');
+			paintPad = new Sketchpad(el , {
+				backgroundColor : paintBackground,
+				linesize : 10,
+				height :300,
+				});
+			paintSlide();
+	});
+}
+doPaintColor = function(item){
+	var color = $(item).attr('data');
+	paintPad.setLineColor(color);
+	paintCurrent = color;
+	$('.paint_colored').css('background', color);
+	closePaint();
+}
+openPaintColor = function(){
+	$('#paint_eraser').removeClass('paint_selected');
+	paintPad.setLineColor(paintCurrent);
+	showMenu('paint_colors');
+}
+openNewPaint = function(){
+	$('#paint_eraser').removeClass('paint_selected');
+	paintPad.setLineColor(paintCurrent);
+	showMenu('paint_new');
+}
+closePaint = function(){
+	$('.paint_options').hide();
+}
+openPaintBrush = function(){
+	showMenu('paint_brush');
+}
+newPaint = function(item){
+	clearPaint();
+	var color = $(item).attr('data');
+	paintBackground = color;
+	paintPad.nback(color);
+}
+erasePaint = function(item){
+	closePaint();
+	if($(item).hasClass('paint_selected')){
+		var color = paintCurrent;
+		$(item).removeClass('paint_selected');
+	}
+	else {
+		var color = paintBackground;
+		$(item).addClass('paint_selected');
+	}
+	paintPad.setLineColor(color);
+}
+undoPaint = function(){
+	closePaint();
+	paintPad.undo();
+}
+redoPaint = function(){
+	closePaint();
+	paintPad.redo();
+}
+clearPaint = function(){
+	closePaint();
+	$('#paint_eraser').removeClass('paint_selected');
+	paintPad.setLineColor(paintCurrent);
+	paintPad.clear();
+}
+unwaitPaint = function(){
+	paintWait = 0;
+}
+var paintWait = 0;
+sendPaintIt = function(){
+	var url = canvas.toDataURL('image/png');
+	if(paintWait == 0){
+		paintWait = 1;
+		hideModal();
+		if(paintMode == 1){
+			$.ajax({
+				url: "addons/paintit/system/paintit_main.php",
+				type: "post",
+				cache: false,
+				dataType: 'json',
+				data: { 
+					paint_image: url,
+				},
+				success: function(response){
+					if(response.code == 1){
+						appendSelfChatMessage(response.logs);
+					}
+					else {
+						callError(system.error);
+					}
+					setTimeout(unwaitPaint, 5000);
+				},
+				error: function(){
+					callError(system.error);
+					setTimeout(unwaitPaint, 5000);
+				}
+			});	
+		}
+		if(paintMode == 2){
+			$.ajax({
+				url: "addons/paintit/system/paintit_private.php",
+				type: "post",
+				cache: false,
+				dataType: 'json',
+				data: { 
+					paint_image: url,
+					target: paintTarget,
+				},
+				success: function(response){
+					if(response.code == 1){
+						appendSelfPrivateMessage(response.logs);
+					}
+					else if(response.code == 99){
+						appendCannotPrivate();
+					}
+					else {
+						callError(system.error);
+					}
+					setTimeout(unwaitPaint, 5000);
+				},
+				error: function(){
+					callError(system.error);
+					setTimeout(unwaitPaint, 5000);
+				}
+			});	
+		}
+	}
+	else {
+		event.preventDefault();
+	}
+}
+paintSlide = function(){
+	var paintSlider = $('#paint_slider');
+	paintSlider.slider({
+		range: "min",
+		min: 1,
+		max:200,
+		value: 10,
+		slide: function(event, ui) {
+			var size = paintSlider.slider('value');
+			paintPad.setLineSize(size);
+			$('#paint_size').text(size+'px');
+		},
+		stop: function(event,ui) {
+			var psize = paintSlider.slider('value');
+			paintPad.setLineSize(psize);
+			$('#paint_size').text(psize+'px');
+		},
+	});
+}
+
+$(document).ready(function() {
+		appInputMenu('addons/paintit/files/paintit.svg', 'paintIt(1);');
+			appPrivInputMenu('addons/paintit/files/paintit.svg', 'paintIt(2);');
+		boomAddCss('addons/paintit/files/paintit.css');
+});
+</script>
+<script data-cfasync="false" type="text/javascript" src="addons/paintit/files/paintit.js"></script>
+<script data-cfasync="false">
+$(document).ready(function(){
+	boomAddCss('addons/adnoyer/files/adnoyer.css');
+});
+</script><script data-cfasync="false">
+var giphyKey = 'XuED2IKRYVkHXkSQJPqxXCMZxKs5ZjSC';
+var giphyLimit = 0;
+var giphyGifMax = 16;
+var giphyStickerMax = 20;
+var giphyType = 'gifs';
+var giphyBox = 'giphy_gifs';
+var giphyTemplate = '';
+var giphyMode = 1;
+var giphyTarget = 0;
+
+getGiphy = function(md){
+	giphyMode = md;
+	if(md == 2){
+		giphyTarget = currentPrivate;
+	}
+	else {
+		giphyTarget = 0;
+	}
+	if(giphyTemplate == ''){
+		$.post('addons/giphy/system/giphy_template.php', {
+			}, function(response) {
+				showEmptyModal(response, 360);
+				resetGiphy();
+				giphySearch(1);
+				giphyTemplate = response;
+		});
+	}
+	else {
+		showEmptyModal(giphyTemplate, 360);
+		resetGiphy();
+		giphySearch(1);
+	}
+}
+giphyItemTemplate = function(i, o, c, u, t){
+	var giphyRes = '';
+	if(t == 'stickers'){
+		giphyRes = 2;
+	}
+	return '<div onclick="sendGiphy(\''+i+'\', \''+o+'\', \''+c+'\');" class="giphy_res_box'+giphyRes+'"><img src="'+u+'" autoplay loop></div>';
+}
+
+startGiphySearch = function(event, item){
+	var giphyContent = $(item).val();
+	if(event.keyCode == 13 && event.shiftKey == 0){
+		if (/^\s+$/.test(giphyContent) || giphyContent == ''){
+			return false;
+		}
+		else {
+			giphySearch(0);
+		}
+	}
+}
+resetGiphy = function(){
+	giphyType = 'gifs';
+	giphyLimit = giphyGifMax;
+	giphyBox = 'giphy_gifs';
+	$('#'+giphyBox).show();
+}
+sendGiphyMain = function(gid, ori, ch){
+	$.ajax({
+		url: "addons/giphy/system/giphy_main.php",
+		type: "post",
+		cache: false,
+		dataType: 'json',
+		data: { 
+			origin: ori,
+			chat: ch,
+			id: gid,
+		},
+		success: function(response){
+			if(response.code == 1){
+				appendSelfChatMessage(response.logs);
+			}
+			else {
+				callError(system.error);
+			}
+		},
+		error: function(){
+			callError(system.error);
+		}
+	});
+}
+sendGiphyPrivate = function(gid, ori, ch){
+	$.ajax({
+		url: "addons/giphy/system/giphy_private.php",
+		type: "post",
+		cache: false,
+		dataType: 'json',
+		data: { 
+			origin: ori,
+			chat: ch,
+			target: giphyTarget,
+			id: gid,
+		},
+		success: function(response){
+			if(response.code == 1){
+				appendSelfPrivateMessage(response.logs);
+			}
+			else if(response.code == 99){
+				appendCannotPrivate();
+			}
+			else {
+				callError(system.error);
+			}
+		},
+		error: function(){
+			callError(system.error);
+		}
+	});
+}	
+sendGiphy = function(gid, ori, ch){
+	hideModal();
+	if(giphyMode == 1){
+		sendGiphyMain(gid, ori, ch);
+	}
+	if(giphyMode == 2){
+		sendGiphyPrivate(gid, ori, ch);
+	}	
+}
+giphySelect = function(type){
+	if(type == 2){
+		giphyType = 'stickers';
+		giphyBox = 'giphy_stickers';
+		giphyLimit = giphyStickerMax;
+		if($('#'+giphyBox).is(':empty')){
+			giphySearch(2);
+		}
+	}
+	else {
+		giphyType = 'gifs';
+		giphyBox = 'giphy_gifs';
+		giphyLimit = giphyGifMax;
+		if($('#'+giphyBox).is(':empty')){
+			giphySearch(1);
+		}
+	}
+}
+giphySet = function(type){
+	$('.giphy_results').hide();
+	$('#'+type).show();	
+}
+giphySearch = function(type){
+	var giphyData = {};
+	var giphyUrl = '';
+	if(giphyKey == ''){
+		return false;
+	}
+	else {
+		if(type == 1){
+			giphyData = {api_key: giphyKey, limit: 8};
+			giphyUrl = 'https://api.giphy.com/v1/gifs/trending';
+		}
+		else if(type == 2){
+			giphyData = {api_key: giphyKey, limit: 16};
+			giphyUrl = 'https://api.giphy.com/v1/stickers/trending';
+		}
+		else {
+			giphyData = {q: $('#find_giphy').val(),api_key: giphyKey, limit: giphyLimit};
+			giphyUrl = 'https://api.giphy.com/v1/'+giphyType+'/search?';
+			$('#find_giphy').val('');
+		}
+		$.ajax({
+		  url: giphyUrl,
+		  type: 'GET',
+		  dataType: 'json',
+		  data: giphyData,
+		})
+		.done(function(data) {
+		  if (data.meta.status == 200 && data.data.length > 0) {
+			$('#'+giphyBox).html('');
+			$('#'+giphyBox).scrollTop(0);
+			for (var i = 0; i < data.data.length; i++) {
+				var gifId = data.data[i].id;
+				var gifOrigin = data.data[i].images.original.url;
+				var gifHeight = data.data[i].images.fixed_height_small.url;
+				var gifTumb = data.data[i].images.fixed_width_small.url;
+				if(gifTumb == ''){
+					gifTumb = data.data[i].images.fixed_width.url;
+					gifHeight = data.data[i].images.fixed_width.url;
+				}
+				$('#'+giphyBox).append(giphyItemTemplate(gifId, gifOrigin, gifHeight, gifTumb, giphyType));
+			}
+		  }
+		  else{
+			$('#'+giphyBox).html(noDataTemplate());
+		  }
+		})
+		.fail(function() {
+			return false;
+		})
+	}
+}
+
+$(document).ready(function(){
+	appInputMenu('addons/giphy/files/giphy.svg', 'getGiphy(1);');
+	appPrivInputMenu('addons/giphy/files/giphy.svg', 'getGiphy(2);');
+	boomAddCss('addons/giphy/files/giphy.css');
+});
+
+</script>
+<script data-cfasync="false">
+URL = window.URL || window.webkitURL;
+
+$(document).ready(function(){
+	
+	let recordingIsActive = false;
+	let remainingTime = 0;
+	let gumStream;
+	let recorder;
+	let input;
+	let AudioContext = window.AudioContext || window.webkitAudioContext;
+	let audioContext;
+	
+	voiceRecord = function(type, recTimer) {
+		recorder = undefined;
+		const constraints = {audio: true, video: false};
+		navigator.mediaDevices.getUserMedia(constraints).then(stream => {
+			if (recordingIsActive) return false;
+			recordingIsActive = true;
+			audioContext = new AudioContext();
+			gumStream = stream;
+			input = audioContext.createMediaStreamSource(stream);
+			recorder = new WebAudioRecorder(input, {
+				workerDir: "addons/voice_record/files/",
+				encoding: 'mp3',
+				numChannels: 2,
+				onEncoderLoading: (recorder, encoding) => {
+				},
+				onEncoderLoaded: (recorder, encoding) => {
+				}
+			});
+			recorder.onComplete = (recorder, blob) => {
+				var formData = new FormData();
+				formData.append('file', blob);
+				formData.append('token', utk);
+								if(type == 'private'){
+					formData.append('target', currentPrivate);
+					formData.append('private', 1);
+				}
+								$.ajax({
+					url: 'addons/voice_record/system/blob_chat.php',
+					dataType: 'json',
+					cache: false,
+					method: "POST",
+					data: formData,
+					processData: false,
+					contentType: false,
+					success: function (response) {
+						if(response.code == 1){
+							callError(system.wrongFile);
+						}
+						else if(response.code == 5){
+							if(type == 'private'){
+								appendSelfPrivateMessage(response.logs);
+							}
+							else {
+								appendSelfChatMessage(response.logs);
+							}
+						}
+						else {
+							callError(system.error);
+						}
+						$('#record_'+type).removeClass('fa-circle-o-notch fa-spin fa-fw');
+						$('#record_'+type).addClass('fa-microphone');
+						$('#record_'+type).attr('data', 0);
+					},
+					error: function () {
+						callError(system.error);
+					}
+				});
+			};
+			recorder.setOptions({
+				timeLimit: recTimer,
+				encodeAfterRecord: true,
+				mp3: {bitRate: 96}
+			});
+			recorder.startRecording();
+			if (recTimer !== 0) {
+				const time_callback = _RemainingTime => {
+					if (_RemainingTime === 0 && recordingIsActive) {
+						stopRecording(type);
+					}
+				};
+				voiceTimer(recTimer, time_callback);
+			}
+			$('#record_'+type).attr('data', 1);
+			$('#record_'+type).removeClass('fa-microphone');
+			$('#record_'+type).addClass('fa-circle voice_recording');
+
+		}).catch((errors) => {
+			console.log(errors);
+			alert('Please allow microphone access!');
+		});
+
+	}
+	stopRecording = function(type) {
+		remainingTime = 0;
+		recordingIsActive = false;
+		$('#record_'+type).removeClass('fa-circle voice_recording');
+		$('#record_'+type).addClass('fa-circle-o-notch fa-spin fa-fw');
+		gumStream.getAudioTracks()[0].stop();
+		recorder.finishRecording();
+	}
+	voiceTimer = function(seconds, cb) {
+		remainingTime = seconds;
+		setTimeout(() => {
+			cb(remainingTime);
+			if (remainingTime > 0) {
+				voiceTimer(remainingTime - 1, cb);
+			}
+		}, 1000);
+	}
+	runVoiceRecord = function(item){
+		var s = $(item).attr('data');
+		var t = $(item).attr('data-type');
+		if(s == 0){
+			if(t == 'chat'){
+				var m = 30;
+			}
+			if(t == 'private'){
+				var m = 30;
+			}
+			voiceRecord(t, m);
+		}
+		else {
+			stopRecording(t);
+		}
+	}
+
+			$('<div class="input_item main_item base_main"><i class="fa fa-microphone" data="0" data-type="private" id="record_private"></i>').insertAfter('#private_input_box');
+		$(document).on("click", "#record_chat, #record_private", function(){ 
+		runVoiceRecord($(this));
+	});
+	boomAddCss('addons/voice_record/files/voice_record.css');
+	
+});
+</script>
+<script data-cfasync="false" src="addons/voice_record/files/WebAudioRecorder.min.js"></script>
+<script data-cfasync="false" type="text/javascript">
+$(document).ready(function() {
+		    appInputMenu('addons/profile_music/files/icon.png', 'profileMusicBox();');
+		profileMusicBox = function() {
+			$.post('addons/profile_music/system/action.php', {
+				edit_profile_music: 1,
+				token: utk,
+			}, function(response) {
+				showModal(response, 500);
+				$("#fileuploader").uploadFile({
+					url: 'addons/profile_music/system/action.php',
+					fileName:"file",
+					multiple:false,
+					dragDrop:false,
+					maxFileCount:1,
+					uploadStr: '<i class="fa fa-paperclip"></i> Select music file',
+					formData: { 
+						save_profile_music: 1, 
+						token:utk 
+					},
+					onSubmit:function(files) {
+						$(".upload_label").hide();
+						$("#fileuploader").hide();
+					  },
+					onSuccess:function(files,data,xhr,pd){
+						callSaved(system.saved, 1);
+						profileMusicBox();
+					},
+				});
+			});
+		}
+		deleteProfileMusic = function() {
+			$.post('addons/profile_music/system/action.php', {
+				remove_profile_music: 1,
+				token: utk,
+			}, function(response) {
+				callSaved(system.saved, 1);
+				profileMusicBox();
+			});
+		}
+		
+    getProfileMusic = function(t) {
+		$.post('addons/profile_music/system/action.php', {
+				get_profile_music: 1,
+				target: t,
+			}, function(response) {
+				if(response == ''){
+					return false;
+				}
+				$('#probio').prepend('<div class="btable blisting proitem" id="profile_music"></div>');
+				$('#profile_music').html(response); 
+			});
+	}
+
+	$(document).on('click','.get_info', function(){
+		var target = $(this).attr('data');
+		getProfileMusic(target);
+	});
+    
+});
+
+</script> <script data-cfasync="false" src="js/function_main.js"></script>
+<script data-cfasync="false" src="js/function_temp.js"></script>
+<script data-cfasync="false" src="js/function_menu.js"></script>
+<script data-cfasync="false" src="js/function_player.js"></script>
+<script data-cfasync="false" src="js/function_paste.js"></script>
+<div id="small_modal" class="small_modal_out modal_back">
+	<div id="small_modal_in" class="small_modal_in modal_in back_modal modal_pad">
+		<div class="modal_close cancel_modal">
+			<div class="bcell_mid">
+				<i class="fa fa-times"></i>
+			</div>
+		</div>
+		<div id="small_modal_content" class="modal_content small_modal_content">
+		</div>
+	</div>
+</div>
+<div id="large_modal" class="large_modal_out modal_back">
+	<div id="large_modal_in" class="large_modal_in modal_in back_modal">
+		<div id="large_modal_content" class="modal_content large_modal_content">
+		</div>
+	</div>
+</div>
+<div id="over_modal" class="over_modal_out modal_back">
+	<div id="over_modal_in" class="over_modal_in modal_in back_modal modal_pad">
+		<div class="modal_close cancel_over">
+			<div class="bcell_mid">
+				<i class="fa fa-times"></i>
+			</div>
+		</div>
+		<div id="over_modal_content" class="modal_content over_modal_content">
+		</div>
+	</div>
+</div>
+<div id="over_emodal" class="over_emodal_out modal_back">
+	<div id="over_emodal_in" class="over_emodal_in modal_in back_modal">
+		<div id="over_emodal_content" class="modal_content over_emodal_content">
+		</div>
+	</div>
+</div>
+<div id='container_stream' class="streamers vidstream background_stream">
+	<div class="btable stream_header">
+		<div id="move_video" class="bcell_mid">
+		</div>
+		<div onclick="toggleStream(1);" class="bcell_mid vidminus vidopt">
+			<i class="fa fa-minus"></i>
+		</div>
+		<div onclick="closeVideo();" class="bcell_mid vidopt">
+			<i class="fa fa-times"></i>
+		</div>
+	</div>
+	<div id='wrap_stream'>
+	</div>
+</div>
+<div id='container_stream_audio' class="streamers audstream background_stream">
+	<div class="btable stream_header">
+		<div id="move_audio" class="bcell_mid">
+		</div>
+		<div onclick="toggleStreamAudio(1);" class="bcell_mid vidminus vidopt">
+			<i class="fa fa-minus"></i>
+		</div>
+		<div onclick="closeAudio();" class="bcell_mid vidopt">
+			<i class="fa fa-times"></i>
+		</div>
+	</div>
+	<div id='wrap_stream_audio'>
+	</div>
+</div>
+<div class="saved_data">
+	<span class="saved_span"></span>
+</div>
+<div class="theme_color hidden">
+</div>
+<audio class="hidden" id="private_sound" src="sounds/private.mp3"></audio>
+<audio class="hidden" id="message_sound" src="sounds/new_messages.mp3"></audio>
+<audio class="hidden" id="username_sound" src="sounds/username.mp3"></audio>
+<audio class="hidden" id="levelup_sound" src="sounds/levelup.mp3"></audio>
+<audio class="hidden" id="badge_sound" src="sounds/badge.mp3"></audio>
+<audio class="hidden" id="quote_sound" src="sounds/quote.mp3"></audio>
+<audio class="hidden" id="whistle_sound" src="sounds/whistle.mp3"></audio>
+<audio class="hidden" id="notify_sound" src="sounds/notify.mp3"></audio>
+<audio class="hidden" id="news_sound" src="sounds/new_news.mp3"></audio>
+<audio class="hidden" id="clear_sound" src="sounds/clear.mp3"></audio>
+<audio class="hidden" id="join_sound" src="sounds/join.mp3"></audio>
+<audio class="hidden" id="action_sound" src="sounds/action.mp3"></audio>
+<link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@400;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amita:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Averia+Libre:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@400;700;800&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Sansita:wght@400;700;900&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/fonts.css">
+<script>
+systemRankIcon = function(v){
+	var s = {"0":"guest.svg","1":"user.svg","50":"vip.svg","54":"LeonQueen.svg","55":"dj.svg","69":"bot.svg","70":"mod.svg","80":"admin.svg","90":"super.svg","100":"owner.svg","999":"user.svg"};
+	if(v in s){
+		return 'default_images/rank/'+s[v];
+	}
+}
+systemRankTitle = function(v){
+	var s = {"0":"Toerist","1":"Dorpeling","50":"Ereburger","54":"LeonQueen","55":"DJ","69":"Bot","70":"Veldwachter","80":"Assistent","90":"Wethouder","100":"Burgemeester","999":"Niemand"};
+	if(v in s){
+		return s[v];
+	}
+}
+roomRankIcon = function(v){
+	var s = {"0":"user.svg","4":"room_mod.svg","5":"room_admin.svg","6":"room_owner.svg","9":"user.svg"};
+	if(v in s){
+		return 'default_images/rank/'+s[v];
+	}
+}
+roomRankTitle = function(v){
+	var s = {"0":"Dorpeling","4":"Moderator kamer","5":"Admin kamer","6":"Room eigenaar","9":"Niemand"};
+	if(v in s){
+		return s[v];
+	}
+}
+statusIcon= function(v){
+	var s = {"1":"online.svg","2":"away.svg","3":"busy.svg","4":"voetbal.svg","5":"working.svg","6":"gamen.svg","7":"F1.svg","8":"eten.svg","9":"tv-kijken.svg","99":"invisible.svg"};
+	if(v in s){
+		return 'default_images/status/'+s[v];
+	}
+}
+statusTitle = function(v){
+	var s = {"1":"Online","2":"Even weg","3":"Bezet","4":"Voetbal kijken","5":"Aan het werk","6":"Gamen","7":"F1 kijken","8":"Eten","9":"TV kijken","99":"Onzichbaar"};
+	if(v in s){
+		return s[v];
+	}
+}
+genderTitle = function(v){
+	var s = {"1":"Man","2":"Vrouw","3":"Anders"};
+	if(v in s){
+		return s[v];
+	}
+}
+renderAge = function(v){
+	return v+" jaren";
+}
+muteIcon = function(){
+	return 'default_images/actions/muted.svg';
+}
+ghostIcon = function(){
+	return 'default_images/actions/ghost.svg';
+}
+imgLoader = () => {
+	return 'default_images/misc/holder.png';
+}
+</script></body>
+</html>
